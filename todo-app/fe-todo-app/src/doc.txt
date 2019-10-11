@@ -1,0 +1,17 @@
+WebService
+
+Software system designed to support interoperable 
+machine-to-machine interaction over a network.
+
+3 Keys
+
+1- Designed for machine-to-machine (or application-to-applitation) 
+interaction
+2- Should be interoperable - not plattaform dependent
+3- Should allow communication over a network
+
+Obs:
+1- Most app are designed only to human interaction (only HTML)
+2- API REST (can be used by .Net and Java app)
+3- Can be distributed (deploy any where)
+
