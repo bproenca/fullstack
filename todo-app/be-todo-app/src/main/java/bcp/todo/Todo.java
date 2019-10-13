@@ -42,6 +42,10 @@ public class Todo {
         this.done = done;
     }
 
+    protected Todo() {
+        
+    }
+
     public boolean isDone() {
         return done;
     }

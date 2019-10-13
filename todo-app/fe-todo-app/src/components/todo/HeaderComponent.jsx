@@ -5,7 +5,6 @@ import AuthenticationService from './AuthenticationService.js'
 class HeaderComponent extends Component {
     render() {
       const isUserLoggedIn = AuthenticationService.isUserLoggedIn();
-      console.log(isUserLoggedIn);
   
       return(
         <header>

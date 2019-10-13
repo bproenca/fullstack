@@ -15,6 +15,7 @@ class ListTodosComponent extends Component {
         ],
         message: null
       }
+      this.updateTodoClicked = this.updateTodoClicked.bind(this);
       this.deleteTodoClicked = this.deleteTodoClicked.bind(this);
       this.refreshTodos = this.refreshTodos.bind(this);
     }
@@ -44,6 +45,10 @@ class ListTodosComponent extends Component {
       )
     }
 
+    updateTodoClicked(id){
+      this.props.history.push(`/todos/${id}`)
+    }
+
     render() {
       return (
         <div>
@@ -57,6 +62,7 @@ class ListTodosComponent extends Component {
                   <th>DESC</th>
                   <th>DONE</th>
                   <th>TARGET DATE</th>
+                  <th>UPDATE</th>
                   <th>DELETE</th>
                 </tr>
               </thead>
@@ -69,6 +75,7 @@ class ListTodosComponent extends Component {
                         <td>{todo.desc}</td>
                         <td>{todo.done.toString()}</td>
                         <td>{todo.targetDate.toString()}</td>
+                        <td><button onClick={() => this.updateTodoClicked(todo.id)} className="btn btn-success">Update</button></td>
                         <td><button onClick={() => this.deleteTodoClicked(todo.id)} className="btn btn-warning">Delete</button></td>
                       </tr>
                   )
